@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Fraud Detection Input Form</h1>
+        <form action="{{ url_for('predict') }}" method="post" class="mt-4">
+            <div class="form-group">
+                <label for="transaction_history">Transaction History:</label>
+                <input type="text" class="form-control" id="transaction_history" name="transaction_history" required>
+            </div>
+            <div class="form-group">
+                <label for="employment_verification">Employment Verification:</label>
+                <input type="text" class="form-control" id="employment_verification" name="employment_verification" required>
+            </div>
+            <div class="form-group">
+                <label for="loan_purpose">Loan Purpose:</label>
+                <input type="text" class="form-control" id="loan_purpose" name="loan_purpose" required>
+            </div>
+            <div class="form-group">
+                <label for="collateral">Collateral:</label>
+                <input type="text" class="form-control" id="collateral" name="collateral" required>
+            </div>
+            <div class="form-group">
+                <label for="geographic_location">Geographic Location:</label>
+                <input type="text" class="form-control" id="geographic_location" name="geographic_location" required>
+            </div>
+            <div class="form-group">
+                <label for="race">Race:</label>
+                <input type="text" class="form-control" id="race" name="race" required>
+            </div>
+            <div class="form-group">
+                <label for="previous_loan_credit_score">Previous Loan Credit Score:</label>
+                <input type="text" class="form-control" id="previous_loan_credit_score" name="previous_loan_credit_score" required>
+            </div>
+            <div class="form-group">
+                <label for="annual_income">Annual Income:</label>
+                <input type="text" class="form-control" id="annual_income" name="annual_income" required>
+            </div>
+            <div class="form-group">
+                <label for="loan_amount_requested">Loan Amount Requested:</label>
+                <input type="text" class="form-control" id="loan_amount_requested" name="loan_amount_requested" required>
+            </div>
+            <div class="form-group">
+                <label for="tenure_period">Tenure Period (months):</label>
+                <input type="text" class="form-control" id="tenure_period" name="tenure_period" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
